@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<test-results xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="nunit_schema_2.5.xsd" name="Pester" total="26" errors="0" failures="0" not-run="0" inconclusive="0" ignored="0" skipped="0" invalid="0" date="2019-01-03" time="09:40:02">
+  <environment user="martin.dome" machine-name="AR-IT04772" cwd="C:\Users\martin.dome\CodigoSonarqube\Module" user-domain="GLOBANT" platform="Microsoft Windows 10 Enterprise|C:\windows|\Device\Harddisk0\Partition3" nunit-version="2.5.8.0" os-version="10.0.17763" clr-version="4.0.30319.42000" />
+  <culture-info current-culture="en-US" current-uiculture="en-US" />
+  <test-suite type="TestFixture" name="Pester" executed="True" result="Success" success="True" time="2.0592" asserts="0" description="Pester">
+    <results>
+      <test-suite type="TestFixture" name=".\AdUserSync.Tests.ps1" executed="True" result="Success" success="True" time="2.0592" asserts="0" description=".\AdUserSync.Tests.ps1">
+        <results>
+          <test-suite type="TestFixture" name="Get-AdUserDefaultPassword" executed="True" result="Success" success="True" time="0.5222" asserts="0" description="Get-AdUserDefaultPassword">
+            <results>
+              <test-case description="builds the default FilePath parameter correctly and passes it to Import-CliXml" name="Get-AdUserDefaultPassword.builds the default FilePath parameter correctly and passes it to Import-CliXml" time="0.4331" asserts="0" success="True" result="Success" executed="True" />
+              <test-case description="returns a single secure string" name="Get-AdUserDefaultPassword.returns a single secure string" time="0.0314" asserts="0" success="True" result="Success" executed="True" />
+              <test-case description="converts the expected password to a secure string" name="Get-AdUserDefaultPassword.converts the expected password to a secure string" time="0.0577" asserts="0" success="True" result="Success" executed="True" />
+            </results>
+          </test-suite>
+          <test-suite type="TestFixture" name="Get-ActiveEmployee" executed="True" result="Success" success="True" time="0.3551" asserts="0" description="Get-ActiveEmployee">
+            <results>
+              <test-case description="returns the expected number of objects" name="Get-ActiveEmployee.returns the expected number of objects" time="0.1215" asserts="0" success="True" result="Success" executed="True" />
+              <test-case description="returns objects that have an ADuserName property appended" name="Get-ActiveEmployee.returns objects that have an ADuserName property appended" time="0.0632" asserts="0" success="True" result="Success" executed="True" />
+              <test-case description="returns objects that have an OUPath property appended" name="Get-ActiveEmployee.returns objects that have an OUPath property appended" time="0.0564" asserts="0" success="True" result="Success" executed="True" />
+              <test-case description="throws an exception when the CSV file cannot be found" name="Get-ActiveEmployee.throws an exception when the CSV file cannot be found" time="0.0414" asserts="0" success="True" result="Success" executed="True" />
+              <test-case description="builds the default FilePath parameter correctly and passes it to Import-Csv" name="Get-ActiveEmployee.builds the default FilePath parameter correctly and passes it to Import-Csv" time="0.0727" asserts="0" success="True" result="Success" executed="True" />
+            </results>
+          </test-suite>
+          <test-suite type="TestFixture" name="Get-InactiveEmployee" executed="True" result="Success" success="True" time="0.3187" asserts="0" description="Get-InactiveEmployee">
+            <results>
+              <test-case description="should only query for AD users that are enabled" name="Get-InactiveEmployee.should only query for AD users that are enabled" time="0.1678" asserts="0" success="True" result="Success" executed="True" />
+              <test-case description="should exclude the domain administrator account from the AD user query" name="Get-InactiveEmployee.should exclude the domain administrator account from the AD user query" time="0.0926" asserts="0" success="True" result="Success" executed="True" />
+              <test-case description="should only return AD users that are not in the CSV file" name="Get-InactiveEmployee.should only return AD users that are not in the CSV file" time="0.0583" asserts="0" success="True" result="Success" executed="True" />
+            </results>
+          </test-suite>
+          <test-suite type="TestFixture" name="Get-EmployeeUsername" executed="True" result="Success" success="True" time="0.1349" asserts="0" description="Get-EmployeeUsername">
+            <results>
+              <test-case description="should return a single string" name="Get-EmployeeUsername.should return a single string" time="0.0889" asserts="0" success="True" result="Success" executed="True" />
+              <test-case description="should return the first initial of the first name as the first character" name="Get-EmployeeUsername.should return the first initial of the first name as the first character" time="0.0178" asserts="0" success="True" result="Success" executed="True" />
+              <test-case description="should return the expected username" name="Get-EmployeeUsername.should return the expected username" time="0.0282" asserts="0" success="True" result="Success" executed="True" />
+            </results>
+          </test-suite>
+          <test-suite type="TestFixture" name="Get-DepartmentOUPath" executed="True" result="Success" success="True" time="0.0873" asserts="0" description="Get-DepartmentOUPath">
+            <results>
+              <test-case description="returns a single string" name="Get-DepartmentOUPath.returns a single string" time="0.0727" asserts="0" success="True" result="Success" executed="True" />
+              <test-case description="returns the expected OU path" name="Get-DepartmentOUPath.returns the expected OU path" time="0.0146" asserts="0" success="True" result="Success" executed="True" />
+            </results>
+          </test-suite>
+          <test-suite type="TestFixture" name="Test-AdUserExists" executed="True" result="Success" success="True" time="0.1383" asserts="0" description="Test-AdUserExists">
+            <results>
+              <test-case description="returns $true if the user account can be found in AD" name="Test-AdUserExists.returns $true if the user account can be found in AD" time="0.0886" asserts="0" success="True" result="Success" executed="True" />
+              <test-case description="returns $false if the user account cannot be found in AD" name="Test-AdUserExists.returns $false if the user account cannot be found in AD" time="0.0498" asserts="0" success="True" result="Success" executed="True" />
+            </results>
+          </test-suite>
+          <test-suite type="TestFixture" name="Test-AdGroupExists" executed="True" result="Success" success="True" time="0.1315" asserts="0" description="Test-AdGroupExists">
+            <results>
+              <test-case description="returns $true if the group can be found in AD" name="Test-AdGroupExists.returns $true if the group can be found in AD" time="0.0973" asserts="0" success="True" result="Success" executed="True" />
+              <test-case description="returns $false if the group cannot be found in AD" name="Test-AdGroupExists.returns $false if the group cannot be found in AD" time="0.0342" asserts="0" success="True" result="Success" executed="True" />
+            </results>
+          </test-suite>
+          <test-suite type="TestFixture" name="Test-AdGroupMemberExists" executed="True" result="Success" success="True" time="0.1496" asserts="0" description="Test-AdGroupMemberExists">
+            <results>
+              <test-case description="returns $true if the username is a member of the group" name="Test-AdGroupMemberExists.returns $true if the username is a member of the group" time="0.0996" asserts="0" success="True" result="Success" executed="True" />
+              <test-case description="returns $false if the username is not a member of the group" name="Test-AdGroupMemberExists.returns $false if the username is not a member of the group" time="0.05" asserts="0" success="True" result="Success" executed="True" />
+            </results>
+          </test-suite>
+          <test-suite type="TestFixture" name="Test-ADOrganizationalUnitExists" executed="True" result="Success" success="True" time="0.1329" asserts="0" description="Test-ADOrganizationalUnitExists">
+            <results>
+              <test-case description="creates the proper full OU DN and passes to Get-ADOrganizationalUnit" name="Test-ADOrganizationalUnitExists.creates the proper full OU DN and passes to Get-ADOrganizationalUnit" time="0.0727" asserts="0" success="True" result="Success" executed="True" />
+              <test-case description="returns $true if the group can be found in AD" name="Test-ADOrganizationalUnitExists.returns $true if the group can be found in AD" time="0.0273" asserts="0" success="True" result="Success" executed="True" />
+              <test-case description="returns $false if the group cannot be found in AD" name="Test-ADOrganizationalUnitExists.returns $false if the group cannot be found in AD" time="0.0329" asserts="0" success="True" result="Success" executed="True" />
+            </results>
+          </test-suite>
+          <test-suite type="TestFixture" name="New-CompanyAdUser" executed="True" result="Success" success="True" time="0.0886" asserts="0" description="New-CompanyAdUser">
+            <results>
+              <test-case description="should attempt to create an AD user with the proper parameters" name="New-CompanyAdUser.should attempt to create an AD user with the proper parameters" time="0.0886" asserts="0" success="True" result="Success" executed="True" />
+            </results>
+          </test-suite>
+        </results>
+      </test-suite>
+    </results>
+  </test-suite>
+</test-results>
